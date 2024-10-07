@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Government Scheme Complaint</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+   
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <div class="main-top" id="home">
+        <div class="headder-top">
+          <nav>
+            <div id="logo">
+              <h1><a href="http://127.0.0.1:8000/" class="navagro"><img src="../static/images/tn-icon.png" alt="Logo" style="height: 30px; width: auto;">
+                GovAi Hub</a></h1>
+            </div>
+            <label for="drop" class="toggle">Menu</label>
+            <input type="checkbox" id="drop">
+            <ul class="menu mt-2">
+              <li class="topnav" ><a href="http://127.0.0.1:8000/">Home</a></li>
+              <li><a href="#about" class="topnav">About</a></li>
+              <!-- <li><a href="#features" class="topnav">Features</a></li> -->
+              <li><a href="#test" class="topnav">Detect</a></li>
+              <li><a href="http://127.0.0.1:5000/" class="topnav">Schemes</a></li>
+              <li><a href="http://127.0.0.1:5050/" class="topnav">Complaints</a></li>
+              <li id="google_translate_element"></li>
+
+            </ul>
+          </nav>
+        </div>
+       
+    </div>
+    <div class="container">
+        <h1>Submit Your Complaint</h1>
+       
+        <form action="/" method="POST">
+            <label for="sector" >Select Sector:</label>
+            <select name="sector" id="sector" class="select1" required>
+                <option value="" disabled selected>Select a sector</option>
+                <option value="Agriculture">Agriculture</option>
+                <option value="Finance">Finance</option>
+                <option value="Health">Health</option>
+                <option value="Education">Education</option>
+                <option value="Infrastructure">Infrastructure</option>
+                <option value="Other">Other</option>
+            </select>
+            
+            <label for="complaint">Your Complaint:</label>
+            <textarea name="complaint" id="complaint" placeholder="Describe your issue with the government scheme..." required></textarea>
+
+            <button type="submit">Submit Complaint</button>
+        </form>
+    </div>
+      <!-- Google Translate script -->
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
+</body>
+</html>
